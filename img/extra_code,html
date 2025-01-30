@@ -1,0 +1,130 @@
+<div class="relative z-10 w-full">
+    <div class="container mx-auto px-4">
+        <!-- Mobile Layout (Centered) -->
+        <div class="md:hidden text-center px-4 pt-64">
+            <h1 class="text-6xl text-white font-bold mb-4 animate-fade-in-up">
+                Immerse yourself in the rhythm of innovation<br/>
+                as you explore my journey.
+            </h1>
+            
+            <!-- Audio for Mobile -->
+            <audio controls autoplay loop class="mt-6">
+                <source src="/path-to-your-audio-file/music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <!-- Desktop Layout (Right Aligned) -->
+        <div class="hidden md:block">
+            <div class="grid grid-cols-12 gap-4">
+                <!-- Empty Left Space -->
+                <div class="col-span-7"></div>
+                
+                <!-- Right Content -->
+                <div class="col-span-5 pt-20">
+                    <div class="text-center">
+                        <h3 class="text-5xl lg:text-6xl text-white font-bold mb-4 animate-fade-in-up">
+                            Immerse yourself in the rhythm of innovation<br/>
+                            as you explore my journey.
+                        </h3>
+                        
+                        <!-- Audio for Desktop -->
+                        <audio controls autoplay loop class="mt-6">
+                            <source src="/img/music_innovation.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+
+                        <div class="flex flex-row gap-4 justify-end">
+                            <!-- Buttons can go here if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Global Perspective and Adaptability</h3>
+                <p class="text-gray-600">Grown up in the UK, USA, Pakistan,India and now Ireland, I adapt to diverse environments and leverage cultural insights to excel in challenges. I adapt in different environments and work cultures and strive for excellence in them.</p>
+            </div>
+        </div>
+
+        
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Proven Leadership</h3>
+                <p class="text-gray-600">Shown Leadership as class Representative, student Representative and member of election commission. I got all these leadership positions by winning student elections which has strengthened my relationship building skills. Prior to this, I sucessfully carried out Ambi+ project which included dozens of meetings with potential investors.</p>
+            </div>
+        </div>
+
+        
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Entrepreneurial Drive</h3>
+                <p class="text-gray-600">Spearheaded Ambi+, a healthcare innovation project, and pitched to angel investors, gaining first-hand experience in startup management. </p>
+            </div>
+        </div>
+
+        <!-- Smart Homes Card -->
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Technical Proficiency</h3>
+                <p class="text-gray-600">Proficient in Python, HTML, data pipelines,SQL queries, with impactful projects like Bossnet, Similarity Finder, and Churn Prediction. Versed with Business tools such as ExtendSim, Generating Mindmaps, LucidChart, PowerBI, Clickup. Equipped with intermediate skills of python framework- Django as well as CSS, Tailwind.</p>
+            </div>
+        </div>
+
+        <!-- Investment Value Card -->
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Academic Excellence</h3>
+                <p class="text-gray-600">Mastering Finance, Data Analysis for Decision Makingm, Innovation, and Project Management with practical skills like portfolio management and innovation audits; 1.1 Honors expected.
+
+                </p>
+            </div>
+        </div>
+
+        
+        <div class="group hover:-translate-y-2 transition-all duration-300">
+            <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full">
+                <div class="flex items-center justify-center w-14 h-14  rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">Strategic Thinker</h3>
+                <p class="text-gray-600">A problem solver with a vision for impactful projects, combining technical expertise and management strategies to drive growth.</p>
+            </div>
+        </div>
+    </div>
