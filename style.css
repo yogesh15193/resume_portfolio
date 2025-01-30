@@ -1,0 +1,262 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.animate-pulse-custom {
+    animation: pulse 2s infinite;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+/* Bounce Animation */
+.animate-bounce-custom {
+    animation: bounce 2s infinite;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Shake Animation */
+.animate-shake {
+    animation: shake 2.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    85% {
+        transform: translateX(0);
+    }
+    90% {
+        transform: translateX(-2px);
+    }
+    92.5% {
+        transform: translateX(2px);
+    }
+    95% {
+        transform: translateX(-2px);
+    }
+    97.5% {
+        transform: translateX(2px);
+    }
+}
+
+/* Scale Animation */
+.animate-scale {
+    transition: transform 0.3s ease;
+}
+
+.animate-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Glow Animation */
+.animate-glow {
+    transition: all 0.3s ease;
+}
+
+.animate-glow:hover {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Combined Animation Class */
+.btn-animated {
+    transition: all 0.3s ease;
+}
+
+.btn-animated:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-animated:active {
+    transform: translateY(0) scale(0.98);
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#enquiryPopup > div {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Icon hover effects */
+.w-12:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+        /* Fade in animation for modal */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    
+        #enquiryPopup {
+            animation: fadeIn 0.3s ease-out;
+        }
+    
+        /* Prevent background scrolling when modal is open */
+        .modal-open {
+            overflow: hidden;
+        }
+
+      /* Add smooth transition for modal */
+      #enquiryPopup {
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    #enquiryPopup.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Add animation for modal content */
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    #enquiryPopup > div {
+        animation: slideIn 0.3s ease-out;
+    }
+
+         /* Modal Animation */
+         @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    
+        #enquiryPopup > div {
+            animation: modalFadeIn 0.3s ease-out;
+        }
+    
+        /* Close Button Style */
+        #enquiryPopup button[onclick="closeEnquiryPopup()"] {
+            font-size: 24px;
+            line-height: 1;
+            padding: 4px 8px;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+        }
+    
+        .reveal.active {
+            opacity: 1;
+        }
+    
+        .fade-bottom {
+            transform: translateY(20px);
+        }
+    
+        .fade-bottom.active {
+            transform: translateY(0);
+        }
+    
+        /* Card Hover Effects */
+        .group:hover .group-hover\:scale-110 {
+            transform: scale(1.1);
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out;
+        }
+
+        /* Add scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulseOffer {
+            0%, 100% {
+                background-color: rgb(239, 68, 68); /* red-500 */
+                transform: rotate(45deg) scale(1);
+            }
+            50% {
+                background-color: rgb(220, 38, 38); /* red-600 */
+                transform: rotate(45deg) scale(1.05);
+            }
+        }
+    
+        .animate-pulse-offer {
+            animation: pulseOffer 2s infinite;
+        }
+
+        .card {
+            @apply rounded-xl overflow-hidden;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        .card:hover {
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+
+        @media (max-width: 768px) {
+            #home {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+        
+            #home .container {
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }

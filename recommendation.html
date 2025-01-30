@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Letter</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-20 px-4 flex items-center">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-0 text-white">
+                <span class="text-lg font-light tracking-wide uppercase mr-[-0.5rem]">Yogesh</span>
+                <div class="text-4xl font-bold tracking-wide uppercase">Y G</div>
+                <span class="text-lg font-light tracking-wide uppercase">Gupta</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Recommendation Content -->
+<!-- Recommendation Content -->
+<div class="container mx-auto px-6 py-16">
+    <div class="container mx-auto px-6 py-6">
+        <div id="recommendation-content" class="bg-white shadow-lg rounded-lg p-4 max-w-4xl mx-auto text-center">
+            <h1 id="rec-title" class="text-3xl font-bold text-gray-800 mb-4"></h1>
+    
+            <!-- PDF Viewer -->
+            <iframe id="rec-pdf" class="w-full h-[90vh] rounded" src="" frameborder="0"></iframe>
+    
+            <!-- Download Button -->
+            <a id="rec-file" class="mt-4 inline-block bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all">
+                Download Letter
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- Back Button -->
+    <div class="text-center mt-8">
+        <a href="index.html#recommendations" class="bg-red-500 text-white px-6 py-3 rounded hover:bg-red-600">
+            Back to Recommendations
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    // for letter of recommendation section
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const recommendations = {
+        rec1: {
+            title: "Recommendation from Prof. Anand Srivastava",
+            file: "/recommendation/LOR_academic.pdf"
+        },
+        rec2: {
+            title: "Letter from Pooja Deshmukh",
+            file: "/recommendation/LOR_professional.pdf"
+        }
+    };
+
+    // Get the recommendation ID from the URL
+    const params = new URLSearchParams(window.location.search);
+    const recId = params.get("id");
+
+    if (recId && recommendations[recId]) {
+        document.getElementById("rec-title").textContent = recommendations[recId].title;
+
+        // Set the PDF link in iframe
+        document.getElementById("rec-pdf").src = recommendations[recId].file + "#toolbar=0&view=FitH";
+
+        // Fix the download button
+        const downloadLink = document.getElementById("rec-file");
+        downloadLink.href = recommendations[recId].file;
+        downloadLink.setAttribute("download", "Recommendation_Letter.pdf"); // Ensures correct file download
+    } else {
+        document.getElementById("recommendation-content").innerHTML = 
+            "<p class='text-red-500 text-center font-bold'>Recommendation not found.</p>";
+    }
+});
+
+</script>
+
+</body>
+</html>

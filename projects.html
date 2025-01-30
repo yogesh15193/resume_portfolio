@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        /* Global Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Container for Content */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Project Section */
+.bg-gray-100 {
+    background-color: #f7f7f7;
+}
+
+/* Project Cards */
+.bg-white {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: black;
+    padding: 15px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centers everything */
+    align-items: center; /* Keeps items aligned */
+    height: 60px; /* Adjust height */
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Spacing between name & initials */
+}
+
+nav div .relative {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav div .relative span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav div .relative span:last-child {
+    font-size: 2rem;
+    font-weight: bold;
+    color: gray;
+    opacity: 0.8;
+    position: absolute;
+    left: 12px;
+}
+
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-16 flex justify-center items-center">
+        <div class="flex items-center space-x-3 text-white">
+            <!-- Full Name Left -->
+            <span class="text-lg font-light tracking-wide uppercase">YOGESH</span>
+    
+            <!-- Center "YG" with proper positioning -->
+            <div class="relative flex items-center text-white text-4xl font-bold tracking-wide">
+                <span class="z-10 text-white">Y</span>
+                <span class="absolute left-5 text-gray-400 opacity-80">G </span>
+            </div>
+    
+            <!-- Full Name Right -->
+            <span> &nbsp;&nbsp;&nbsp; GUPTA </span>
+        </div>
+    </nav>
+    
+    
+    
+        <div class="container mx-auto px-4 py-10">
+        <h2 id="project-title" class="text-4xl font-bold text-gray-800 text-center mb-8"></h2>
+        
+        <p id="project-description" class="text-gray-700 text-center mb-6"></p>
+
+        <div class="bg-white shadow-lg rounded-lg p-6 max-w-lg mx-auto">
+            <h3 class="text-xl font-semibold text-gray-800">Project Documents</h3>
+            <ul id="project-documents" class="list-disc list-inside text-gray-600 mt-4"></ul>
+        </div>
+
+        <!-- Back Button -->
+        <div class="text-center mt-8">
+            <a href="index.html#projects" class="bg-red-500 text-white px-6 py-3 rounded hover:bg-red-600">
+                Back to Projects
+            </a>
+            
+        </div>
+    </div>
+
+    <script>
+        // Define project data
+        const projects = {
+            "project1": {
+                title: "Predicting Customer Churn & Retention Strategies",
+                description: "Machine learning algorithms to consult a telecom company on increasing retention.",
+                documents: [
+                    { name: "Project README", url: "/projects/project1/project_1_README_customer_churn_retention_strategy.pdf" },
+                    { name: "Project Presentation", url: "/projects/project1/project_1_Data Analytics_ppt.pdf" },
+                    { name: "Code Go through", url: "/projects/project1/project1_code_go_through_analysis.pdf" },
+                    { name: "Project Code", url: "/projects/project1/project_1_final_complete_code.py" },
+                ]
+            },
+            "project2": {
+                title: "Data Scraper",
+                description: "A web scraper that extracts data from e-commerce websites.",
+                documents: [
+                    { name: "Project Overview", url: "/projects/data_scraper_overview.pdf" },
+                    { name: "Project Presentation", url: "/projects/project2/data_scraper_results.pdf" },
+                    { name: "Code Documentation", url: "/projects/data_scraper_code.pdf" }
+                ]
+            }
+        };
+
+        // Get project ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("id");
+
+        if (projects[projectId]) {
+            // Populate project data
+            document.getElementById("project-title").innerText = projects[projectId].title;
+            document.getElementById("project-description").innerText = projects[projectId].description;
+            
+            const docList = document.getElementById("project-documents");
+            projects[projectId].documents.forEach(doc => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = doc.url;
+                a.target = "_blank";
+                a.classList.add("text-blue-500", "underline");
+                a.innerText = doc.name;
+                li.appendChild(a);
+                docList.appendChild(li);
+            });
+        } else {
+            document.getElementById("project-title").innerText = "Project Not Found";
+            document.getElementById("project-description").innerText = "The project you're looking for doesn't exist.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.bg-gray-100 {
+    background-color: #f8fafc;}
+    
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar with Your Name Logo -->
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-16 flex items-center px-8">
+        <div class="flex items-center space-x-4 text-white">
+            <span class="text-xl font-light tracking-wide uppercase">Yogesh</span>
+            <div class="text-4xl font-bold tracking-wide opacity-90">
+                <span class="text-white">Y</span>
+                <span class="text-gray-400">G</span>
+            </div>
+            <span class="text-xl font-light tracking-wide uppercase">Gupta</span>
+        </div>
+    </nav>
+    <!-- Certificate Content -->
+    <body class="bg-gray-100">
+        <div class="container mx-auto px-6 py-16 flex flex-col items-center">
+            <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl text-center">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Machine Learning Certificate</h1>
+                <p class="text-gray-700">Issued by Coursera - Completed in Dec 2023.</p>
+    
+                <!-- Certificate Image -->
+                <div class="mt-6">
+                    <img src="your_certificate_image.jpg" alt="Certificate Image" class="rounded-lg shadow-md w-full">
+                </div>
+    
+                <!-- Back Button -->
+                <div class="mt-8">
+                    <a href="certificates.html" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600">
+                        Back to Certificates
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <!-- Footer (Reusing same footer from module.html) -->
+    <footer class="bg-black text-white text-center py-4">
+        <p>&copy; 2025 Yogesh Gupta. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Certificate Data
+        const certificates = {
+            "cert1": {
+                title: "Machine Learning Certificate",
+                description: "Issued by Coursera - Completed in Dec 2023.",
+                imageUrl: "/certificates/machine_learning_certificate.png"
+            },
+            "cert2": {
+                title: "TU Dublin Recommendation Letter",
+                description: "Issued by TU Dublin - Prof. John Smith.",
+                imageUrl: "/certificates/tu_dublin_recommendation_letter.png"
+            }
+        };
+
+        // Get Certificate ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const certId = urlParams.get("id");
+
+        if (certificates[certId]) {
+            document.getElementById("certificate-title").innerText = certificates[certId].title;
+            document.getElementById("certificate-description").innerText = certificates[certId].description;
+            document.getElementById("certificate-image").src = certificates[certId].imageUrl;
+        } else {
+            document.getElementById("certificate-title").innerText = "Certificate Not Found";
+            document.getElementById("certificate-description").innerText = "The certificate you're looking for doesn't exist.";
+        }
+    </script>
+
+</body>
+</html>

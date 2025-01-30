@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Navbar (Name Logo Aligned Left) -->
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-16 flex items-center px-8">
+        <div class="flex items-center space-x-4 text-white">
+            <span class="text-xl font-light tracking-wide uppercase">Yogesh</span>
+            <div class="text-4xl font-bold tracking-wide opacity-90">
+                <span class="text-white">Y</span>
+                <span class="text-gray-400">G</span>
+            </div>
+            <span class="text-xl font-light tracking-wide uppercase">Gupta</span>
+        </div>
+    </nav>
+
+    <!-- Main Content (Takes Up Remaining Space) -->
+    <div class="container mx-auto px-6 py-16 flex-grow">
+        <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-10">
+            <h2 id="module-title" class="text-5xl font-bold text-gray-900 text-center mb-6"></h2>
+
+            <div class="bg-gray-50 p-6 rounded-lg shadow">
+                <h3 class="text-2xl font-semibold text-gray-800">Module Documents</h3>
+                <ul id="module-documents" class="list-disc list-inside text-blue-500 mt-4 text-lg"></ul>
+            </div>
+
+            <!-- Back to Modules Button -->
+            <div class="text-center mt-8">
+                <a href="index.html#masters-modules" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition-all text-lg">
+                    Back to Modules
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Now Sticks to Bottom) -->
+    <footer class="bg-black text-white text-center py-4 mt-auto">
+        <p class="text-lg">&copy; 2024 Yogesh Gupta. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Define module data
+        const modules = {
+            "module1": {
+                title: "Module 1: Data Analytics",
+                documents: [
+                    { name: "final project README", url: "/modules/module_data_analysis/Churn_Prediction_README.txt" },
+                    { name: "Code Go Through", url: "/modules/module_data_analysis/code_go_through_analysis.pdf" },
+                    { name: "Project Powerpoint", url: "/modules/module_data_analysis/Data Analytics_final.pdf" },
+                    { name: "Project Code", url: "/modules/module_data_analysis/final_complete_code.py" },
+                ]
+            },
+            "module2": {
+                title: "Module 2: Machine Learning",
+                documents: [
+                    { name: "Lecture Slides", url: "/modules/module2/module2_lecture_slides.pdf" },
+                    { name: "Project Report", url: "/modules/module2/module2_project_report.pdf" }
+                ]
+            }
+        };
+
+        // Get module ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const moduleId = urlParams.get("id");
+
+        if (modules[moduleId]) {
+            // Populate module data
+            document.getElementById("module-title").innerText = modules[moduleId].title;
+
+            const docList = document.getElementById("module-documents");
+            modules[moduleId].documents.forEach(doc => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                a.href = doc.url;
+                a.target = "_blank";
+                a.classList.add("underline");
+                a.innerText = doc.name;
+                li.appendChild(a);
+                docList.appendChild(li);
+            });
+        } else {
+            document.getElementById("module-title").innerText = "Module Not Found";
+        }
+    </script>
+
+</body>
+</html>
