@@ -4,7 +4,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './index.html'
+        main: './index.html',
+        certificate:'./certificate.html'
         // Add more HTML files as needed
       }
     }

@@ -10,14 +10,56 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
 
     <!-- Navbar (Name Logo Aligned Left) -->
-    <nav class="sticky top-0 bg-black shadow-lg z-50 h-16 flex items-center px-8">
-        <div class="flex items-center space-x-4 text-white">
-            <span class="text-xl font-light tracking-wide uppercase">Yogesh</span>
-            <div class="text-4xl font-bold tracking-wide opacity-90">
-                <span class="text-white">Y</span>
-                <span class="text-gray-400">G</span>
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-20 px-4 flex items-center">
+
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Left-Aligned Name Logo -->
+                <div class="flex items-center space-x-0 text-white">
+                    <!-- Full Name Left -->
+                    <span class="text-lg font-light tracking-wide uppercase mr-[-0.5rem]">Yogesh</span>
+                  
+                    <!-- Styled Initials in the Center -->
+                    <div class="w-32 h-32">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Stylish "Y" -->
+                            <text x="10" y="60" font-size="50" font-family="serif" font-weight="bold" fill="white">Y</text>
+                            <!-- Stylish "G" with overlap -->
+                            <text x="40" y="60" font-size="50" font-family="serif" font-weight="bold" fill="white" opacity="0.8">G</text>
+                        </svg>
+                    </div>
+                  
+                    <!-- Full Name Right -->
+                    <span class="text-lg font-light tracking-wide uppercase">Gupta</span>
+                </div>
+            
+                <!-- Navigation Links (Center-Aligned) -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="/#home" class="text-white hover:text-blue-600 transition-colors">Home</a>
+                    <a href="/#about-me" class="text-white hover:text-blue-600 transition-colors">About Me</a>
+                    <a href="/#why-recruit-me" class="text-white hover:text-blue-600 transition-colors">Why Recruit Me?</a>
+                    <a href="/#resume" class="text-white hover:text-blue-600 transition-colors">Resume</a>
+                    <a href="/#projects" class="text-white hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="/#masters-modules" class="text-white hover:text-blue-600 transition-colors">Master's Modules</a>
+                    <a href="/#Certificates" class="text-white hover:text-blue-600 transition-colors">Certificates</a>
+                    <a href="/#recommendations" class="text-white hover:text-blue-600 transition-colors">Recommendations</a>
+                </div>
+            
+                <!-- Right-Aligned Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.linkedin.com/in/yogesh-gupta-a9584671/" target="_blank" 
+                       class="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/yogesh15193" target="_blank" 
+                       class="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full">
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <span class="text-xl font-light tracking-wide uppercase">Gupta</span>
+            
+            
+
         </div>
     </nav>
 
@@ -42,7 +84,7 @@
 
     <!-- Footer (Now Sticks to Bottom) -->
     <footer class="bg-black text-white text-center py-4 mt-auto">
-        <p class="text-lg">&copy; 2024 Yogesh Gupta. All rights reserved.</p>
+        <p class="text-lg">&copy; 2025 Yogesh Gupta. All rights reserved.</p>
     </footer>
 
     <script>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate Details</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
     font-family: 'Inter', sans-serif;
 }
 
-.container {
+/* .container {
     max-width: 900px;
     margin: auto;
     text-align: center;
@@ -22,25 +22,67 @@ img {
 }
 
 .bg-gray-100 {
-    background-color: #f8fafc;}
+    background-color: #f8fafc;} */
     
     </style>
 </head>
 <body class="bg-gray-100">
 
     <!-- Navigation Bar with Your Name Logo -->
-    <nav class="sticky top-0 bg-black shadow-lg z-50 h-16 flex items-center px-8">
-        <div class="flex items-center space-x-4 text-white">
-            <span class="text-xl font-light tracking-wide uppercase">Yogesh</span>
-            <div class="text-4xl font-bold tracking-wide opacity-90">
-                <span class="text-white">Y</span>
-                <span class="text-gray-400">G</span>
+    <nav class="sticky top-0 bg-black shadow-lg z-50 h-20 px-4 flex items-center">
+
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Left-Aligned Name Logo -->
+                <div class="flex items-center space-x-0 text-white">
+                    <!-- Full Name Left -->
+                    <span class="text-lg font-light tracking-wide uppercase mr-[-0.5rem]">Yogesh</span>
+                  
+                    <!-- Styled Initials in the Center -->
+                    <div class="w-32 h-32">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Stylish "Y" -->
+                            <text x="10" y="60" font-size="50" font-family="serif" font-weight="bold" fill="white">Y</text>
+                            <!-- Stylish "G" with overlap -->
+                            <text x="40" y="60" font-size="50" font-family="serif" font-weight="bold" fill="white" opacity="0.8">G</text>
+                        </svg>
+                    </div>
+                  
+                    <!-- Full Name Right -->
+                    <span class="text-lg font-light tracking-wide uppercase">Gupta</span>
+                </div>
+            
+                <!-- Navigation Links (Center-Aligned) -->
+                <div class="hidden lg:flex space-x-8">
+                    <a href="/#home" class="text-white hover:text-blue-600 transition-colors">Home</a>
+                    <a href="/#about-me" class="text-white hover:text-blue-600 transition-colors">About Me</a>
+                    <a href="/#why-recruit-me" class="text-white hover:text-blue-600 transition-colors">Why Recruit Me?</a>
+                    <a href="/#resume" class="text-white hover:text-blue-600 transition-colors">Resume</a>
+                    <a href="/#projects" class="text-white hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="/#masters-modules" class="text-white hover:text-blue-600 transition-colors">Master's Modules</a>
+                    <a href="/#Certificates" class="text-white hover:text-blue-600 transition-colors">Certificates</a>
+                    <a href="/#recommendations" class="text-white hover:text-blue-600 transition-colors">Recommendations</a>
+                </div>
+            
+                <!-- Right-Aligned Buttons -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.linkedin.com/in/yogesh-gupta-a9584671/" target="_blank" 
+                       class="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/yogesh15193" target="_blank" 
+                       class="hidden md:block bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-full">
+                        GitHub
+                    </a>
+                </div>
             </div>
-            <span class="text-xl font-light tracking-wide uppercase">Gupta</span>
+            
+            
+
         </div>
     </nav>
     <!-- Certificate Content -->
-    <body class="bg-gray-100">
+    <div class="bg-gray-100 min-h-screen">
         <div class="container mx-auto px-6 py-16 flex flex-col items-center">
             <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl text-center">
                 <h1 class="text-3xl font-bold text-gray-900 mb-4">Machine Learning Certificate</h1>
@@ -48,18 +90,18 @@ img {
     
                 <!-- Certificate Image -->
                 <div class="mt-6">
-                    <img src="your_certificate_image.jpg" alt="Certificate Image" class="rounded-lg shadow-md w-full">
+                    <img src="/img/cert_sample.avif" alt="Certificate Image" class="rounded-lg shadow-md w-full">
                 </div>
     
                 <!-- Back Button -->
                 <div class="mt-8">
-                    <a href="certificates.html" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600">
+                    <a href="index.html#certificates" class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600">
                         Back to Certificates
                     </a>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
     
     <!-- Footer (Reusing same footer from module.html) -->
     <footer class="bg-black text-white text-center py-4">
@@ -94,6 +136,7 @@ img {
             document.getElementById("certificate-description").innerText = "The certificate you're looking for doesn't exist.";
         }
     </script>
+
 
 </body>
 </html>
