@@ -1194,15 +1194,17 @@ iframe {
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <!-- Initialize EmailJS with your Public Key -->
-<script>
+<!-- <script>
     (function() {
         emailjs.init("9nwHPi42pkX5veWDS"); // Replace this with your actual Public Key
     })();
-</script>
+</script> -->
 
-
+<script src="/js/aboutme.js"></script>
+<script src="/js/projects.js"> </script>
 
 <script>
+
 
     // JavaScript for Animations
     //document.addEventListener("DOMContentLoaded", () => {
@@ -1297,45 +1299,45 @@ iframe {
 
 
   // ----- Intersection Observer for About Me Section -----
-  document.addEventListener("DOMContentLoaded", () => {
-  const highlightItems = document.querySelectorAll(".highlight-item");
-  if (highlightItems.length > 0) {
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+//   document.addEventListener("DOMContentLoaded", () => {
+//   const highlightItems = document.querySelectorAll(".highlight-item");
+//   if (highlightItems.length > 0) {
+//     const observer = new IntersectionObserver(
+//       (entries, observer) => {
+//         entries.forEach((entry) => {
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add("animate");
+//             observer.unobserve(entry.target);
+//           }
+//         });
+//       },
+//       { threshold: 0.1 }
+//     );
 
-    highlightItems.forEach((item, index) => {
-      item.style.transitionDelay = `${index * 0.2}s`; // Staggered animation
-      observer.observe(item);
-    });
-  }
+//     highlightItems.forEach((item, index) => {
+//       item.style.transitionDelay = `${index * 0.2}s`; // Staggered animation
+//       observer.observe(item);
+//     });
+//   }
 
-  // ----- Fade Animation for Other Sections -----
-  const fadeElements = document.querySelectorAll(".fade-bottom");
-  if (fadeElements.length > 0) {
-    const observer2 = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
-    });
+//   // ----- Fade Animation for Other Sections -----
+//   const fadeElements = document.querySelectorAll(".fade-bottom");
+//   if (fadeElements.length > 0) {
+//     const observer2 = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("in-view");
+//         }
+//       });
+//     });
 
-    fadeElements.forEach((el) => observer2.observe(el));
-  }
-});
+//     fadeElements.forEach((el) => observer2.observe(el));
+//   }
+// });
 
-// javascript for Projects Section 
+// // javascript for Projects Section 
 
-// Open Project Viewer
+// Open Project  Viewer
 function openProjectViewer(fileUrl) {
     const iframe = document.getElementById("project-iframe");
     iframe.src = fileUrl + "#toolbar=0&navpanes=0&scrollbar=0"; // Hides toolbar
@@ -1361,54 +1363,54 @@ document.getElementById("close-project-btn").addEventListener("click", () => {
 
 // for viewing projects...
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Sample Project Data
-    const projectsData = [
-        { title: "Predicting Customer Churn", description: "Machine learning for telecom retention strategies.", link: "projects.html?id=project1" },
-        { title: "Data Scraper", description: "A web scraper for extracting data from e-commerce websites.", link: "projects.html?id=project2" },
-        { title: "AI Chatbot", description: "Conversational AI chatbot for automating customer service.", link: "projects.html?id=project3" },
-        { title: "Stock Market Predictor", description: "AI-based predictive analytics for stock trends.", link: "projects.html?id=project4" }
-    ];
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Sample Project Data
+//     const projectsData = [
+//         { title: "Predicting Customer Churn", description: "Machine learning for telecom retention strategies.", link: "projects.html?id=project1" },
+//         { title: "Data Scraper", description: "A web scraper for extracting data from e-commerce websites.", link: "projects.html?id=project2" },
+//         { title: "AI Chatbot", description: "Conversational AI chatbot for automating customer service.", link: "projects.html?id=project3" },
+//         { title: "Stock Market Predictor", description: "AI-based predictive analytics for stock trends.", link: "projects.html?id=project4" }
+//     ];
 
-    const projectsContainer = document.getElementById("projects-container");
-    const loadMoreBtn = document.getElementById("load-more-btn");
+//     const projectsContainer = document.getElementById("projects-container");
+//     const loadMoreBtn = document.getElementById("load-more-btn");
 
-    let visibleProjects = 2; // Show only 2 projects initially
+//     let visibleProjects = 2; // Show only 2 projects initially
 
-    // Function to display projects
-    function displayProjects() {
-        projectsContainer.innerHTML = ""; // Clear previous content
-        projectsData.slice(0, visibleProjects).forEach((project) => {
-            const projectCard = document.createElement("div");
-            projectCard.className = "bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105";
-            projectCard.innerHTML = `
-                <h3 class="text-2xl font-semibold text-gray-800 mb-2">${project.title}</h3>
-                <p class="text-gray-600 mb-4">${project.description}</p>
-                <a href="${project.link}"
-                   class="inline-block bg-blue-500 text-white font-medium px-5 py-2 rounded-lg hover:bg-blue-600 transition-all">
-                   View Project
-                </a>
-            `;
-            projectsContainer.appendChild(projectCard);
-        });
+//     // Function to display projects
+//     function displayProjects() {
+//         projectsContainer.innerHTML = ""; // Clear previous content
+//         projectsData.slice(0, visibleProjects).forEach((project) => {
+//             const projectCard = document.createElement("div");
+//             projectCard.className = "bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105";
+//             projectCard.innerHTML = `
+//                 <h3 class="text-2xl font-semibold text-gray-800 mb-2">${project.title}</h3>
+//                 <p class="text-gray-600 mb-4">${project.description}</p>
+//                 <a href="${project.link}"
+//                    class="inline-block bg-blue-500 text-white font-medium px-5 py-2 rounded-lg hover:bg-blue-600 transition-all">
+//                    View Project
+//                 </a>
+//             `;
+//             projectsContainer.appendChild(projectCard);
+//         });
 
-        // Hide "Load More" button if all projects are displayed
-        if (visibleProjects >= projectsData.length) {
-            loadMoreBtn.style.display = "none";
-        }
-    }
+//         // Hide "Load More" button if all projects are displayed
+//         if (visibleProjects >= projectsData.length) {
+//             loadMoreBtn.style.display = "none";
+//         }
+//     }
 
-    // Load more projects when the button is clicked
-    loadMoreBtn.addEventListener("click", () => {
-        visibleProjects += 2; // Show 2 more projects each time
-        displayProjects();
-    });
+//     // Load more projects when the button is clicked
+//     loadMoreBtn.addEventListener("click", () => {
+//         visibleProjects += 2; // Show 2 more projects each time
+//         displayProjects();
+//     });
 
-    // Initial display
-    displayProjects();
-});
+//     // Initial display
+//     displayProjects();
+// });
 
-// master's modules section
+// // master's modules section
 
 //recommendation form'
 // document.addEventListener("DOMContentLoaded", function () {

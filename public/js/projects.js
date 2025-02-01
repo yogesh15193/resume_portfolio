@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("✅ projects.js loaded");
-
+    // Sample Project Data
     const projectsData = [
         { title: "Predicting Customer Churn", description: "Machine learning for telecom retention strategies.", link: "projects.html?id=project1" },
         { title: "Data Scraper", description: "A web scraper for extracting data from e-commerce websites.", link: "projects.html?id=project2" },
@@ -11,10 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectsContainer = document.getElementById("projects-container");
     const loadMoreBtn = document.getElementById("load-more-btn");
 
-    let visibleProjects = 2;
+    let visibleProjects = 2; // Show only 2 projects initially
 
+    // Function to display projects
     function displayProjects() {
-        projectsContainer.innerHTML = "";
+        projectsContainer.innerHTML = ""; // Clear previous content
         projectsData.slice(0, visibleProjects).forEach((project) => {
             const projectCard = document.createElement("div");
             projectCard.className = "bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105";
@@ -29,15 +29,19 @@ document.addEventListener("DOMContentLoaded", function () {
             projectsContainer.appendChild(projectCard);
         });
 
+        // Hide "Load More" button if all projects are displayed
         if (visibleProjects >= projectsData.length) {
             loadMoreBtn.style.display = "none";
         }
     }
 
+    // Load more projects when the button is clicked
     loadMoreBtn.addEventListener("click", () => {
-        visibleProjects += 2;
+        visibleProjects += 2; // Show 2 more projects each time
         displayProjects();
     });
 
+    // Initial display
     displayProjects();
 });
+
